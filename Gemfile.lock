@@ -39,6 +39,8 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
+    mocha (0.9.10)
+      rake
     nifty-generators (0.4.4)
     paperclip (2.3.8)
       activerecord
@@ -75,6 +77,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  mocha
   nifty-generators
   paperclip
   rails (= 3.0.3)

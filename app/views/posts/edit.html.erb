@@ -1,6 +1,8 @@
-<h1>Editing post</h1>
+<% title "Edit Post" %>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+<p>
+  <%= link_to "Show", @post %> |
+  <%= link_to "View All", posts_path %>
+</p>
