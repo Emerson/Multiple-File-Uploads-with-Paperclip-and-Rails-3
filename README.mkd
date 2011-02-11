@@ -6,6 +6,7 @@ Just follow the guide to get up and running:
 	git clone git://github.com/Emerson/Multiple-File-Uploads-with-Paperclip-and-Rails-3.git paperclip-rails3
 	cd paperclip-rails3
 	bundle install
+	rake db:migrate
 	rails server
 
-Be sure to checkout the screencast at http://www.emersonlackey.com/article/paperclip-with-rails-3
+Be sure to checkout the screencast at [http://www.emersonlackey.com/article/paperclip-with-rails-3](http://www.emersonlackey.com/article/paperclip-with-rails-3)
