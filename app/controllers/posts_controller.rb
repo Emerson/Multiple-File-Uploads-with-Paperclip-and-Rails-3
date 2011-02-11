@@ -9,6 +9,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    5.times { @post.assets.build }    
   end
 
   def create
@@ -23,6 +24,7 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
+    5.times { @post.assets.build }    
   end
 
   def update

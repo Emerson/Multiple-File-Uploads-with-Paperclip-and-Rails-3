@@ -1,4 +1,4 @@
-<%= form_for @post do |f| %>
+<%= form_for @post, :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
   <p>
     <%= f.label :title %><br />
@@ -8,5 +8,33 @@
     <%= f.label :content %><br />
     <%= f.text_area :content %>
   </p>
+
+	<h4>New Files</h4>
+	
+	<% f.fields_for :assets do |asset_fields| %>
+	
+		<% if asset_fields.object.new_record? %>
+		<p>
+			<%= asset_fields.file_field :asset %>
+		</p>
+		<% end %>
+	
+	<% end %>
+	
+	
+	<h4>Old Files</h4>
+	
+	<% f.fields_for :assets do |asset_fields| %>			
+		
+		<% unless asset_fields.object.new_record? %>
+		<div class="thumb">
+			<%= link_to image_tag(asset_fields.object.asset.url(:thumb)), asset_fields.object.asset.url(:original) %>
+			<%= asset_fields.check_box :_destroy %>			
+		</div>	
+		<% end %>
+	
+	<% end %>
+
   <p><%= f.submit %></p>
+
 <% end %>
