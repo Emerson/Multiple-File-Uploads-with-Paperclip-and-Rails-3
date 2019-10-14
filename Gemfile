@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.3'
+gem 'rails', '3.2.17'
 gem 'nifty-generators'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'paperclip'
